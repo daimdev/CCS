@@ -36,15 +36,15 @@ export class Config{
     private listen(): void{
     this.server.listen(this.port);
     this.server.on("listening", () => {
-      let address = this.server.address();
-      let uri = typeof address === "string" ? address: `http://localhost:${address.port}`;
-           console.log("listening on" + uri);
-    });
+                let address = this.server.address();
+                let uri = typeof address === "string" ? address: `http://localhost:${address.port}`;
+                    console.log("listening on" + uri);
+                });
 
     this.server.on("error", (Error) => {
-      if (Error.stack !== "listen") {
-        throw Error;
-      }
+        if (Error.stack !== "listen") {
+            throw Error;
+        }
 
       let bind =
         typeof this.port === "string" ? "Pipe" + this.port : "Port" + this.port;

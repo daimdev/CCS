@@ -1,7 +1,7 @@
 import {Config} from './lib/serverConfiguration';
-import {Routes} from './routes/Routes';
+import {BuyerRoutes} from './features/Buyer/buyerRoutes';
 
 let app = new Config().getApp();
-const route = new Routes(app);
-route.getAllRoutes();
+const Buyerroute = new BuyerRoutes(app)
+Buyerroute.getAllBuyerRoutes()
 export {app};
