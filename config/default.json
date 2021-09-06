@@ -1,3 +1,9 @@
 {
-    "PORT" : "3000"
+    "PORT" : "3000",
+    "secrets": {
+        "cmc": {
+            "encryptionKey": "not-a-real-32-bit-encryption-key"
+
+        }
+    }
 }

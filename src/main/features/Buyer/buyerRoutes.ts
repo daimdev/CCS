@@ -13,7 +13,6 @@ export class BuyerRoutes{
         this.app = app;
         this.setDir();           
     }
-
     private setDir(): void{
         this.app.use(express.static('views'));
         this.app.set('view engine', 'njk');
@@ -21,16 +20,13 @@ export class BuyerRoutes{
             autoescape: true,
             express: this.app
         });
-
     }
-
 
     //all of the get Routings
     // @All Post Routes need to be Added Here 
     private getRoutings(): void {
         this.app.get('/', getBuyerRoutes.BuyerController.BuyerView )
     }   
-
 
     //all of the post Routings
        // @All Post Routes need to be Added Here 
